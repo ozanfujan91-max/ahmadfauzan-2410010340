@@ -19,6 +19,7 @@
             align-items: center;
             min-height: 100vh;
             color: #333;
+            padding: 20px;
         }
 
         .card {
@@ -36,19 +37,21 @@
             transform: translateY(-5px);
         }
 
-        .avatar {
-            width: 100px;
-            height: 100px;
-            background-color: #3498db;
-            color: white;
-            border-radius: 50%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            font-size: 40px;
-            font-weight: bold;
+        .avatar-container {
+            width: 120px;
+            height: 120px;
             margin: 0 auto 20px;
-            box-shadow: 0 4px 10px rgba(52, 152, 219, 0.3);
+            border-radius: 50%;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+            border: 3px solid #3498db;
+        }
+
+        .avatar-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center top; /* Mengatur fokus foto agar pas di wajah */
         }
 
         h2 {
@@ -108,8 +111,9 @@
 <body>
 
     <div class="card">
-        <!-- Inisial Nama -->
-        <div class="avatar">AF</div>
+        <div class="avatar-container">
+            <img src="foto-fauzan.jpg" alt="Foto Ahmad Fauzan">
+        </div>
         
         <h2>Ahmad Fauzan</h2>
         <div class="title">Mahasiswa</div>
